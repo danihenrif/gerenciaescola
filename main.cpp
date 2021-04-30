@@ -6,6 +6,7 @@ using namespace std;
 #include "sistema.hpp"
 
 int main(){
+    imprimeMenu();
     executaPrograma();
     return 0;
 }
