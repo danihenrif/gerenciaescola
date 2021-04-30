@@ -1,2 +1,12 @@
 # gerenciamentoescola
-Mini sistema simulador para gerenciamento de dados de alunos
+
+## Para compilar
+
+```console
+make
+```
+## Para executar 
+
+```console
+make
+```
