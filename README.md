@@ -8,5 +8,5 @@ g++ -o executor -Wall -ansi -pedantic -O0 -g main.cpp node.cpp menu.cpp list.cpp
 ## Para executar 
 
 ```console
-make
+./executor
 ```
