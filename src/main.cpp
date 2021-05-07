@@ -3,18 +3,20 @@
 
 using namespace std;
 
+#include "sistema.hpp"
 #include "menu.hpp"
 #include "node.hpp"
 #include "list.hpp"
 #include "data.hpp"
 
+float calculaMedia(float a, float b, float c){
+    return (a+b+c)/3;
+}
 
 int main(){
+    Sistema *sistema = new Sistema();
     
     int op;
-
-    Data *data1;
-
 
     // Variáveis para armazenar os nomes do estudante e curso
     string nome_estudante, nome_curso;
@@ -49,14 +51,11 @@ int main(){
             cin >> nota1 >> nota2 >> nota3;
             //Entradas do usuário
 
-            
-            //Cálculo da média
-            media = (nota1 + nota2 + nota3) / 3;
 
-            //Cria a instância
-            //data1 = new Data(numero_matricula, nome_estudante, nome_curso, nota1, nota2, nota3, media);
+            media = calculaMedia(nota1, nota2, nota3);
 
-
+            //Chama a função de inserir os dados
+            sistema->inserirDadosSistema(numero_matricula, nome_estudante, nome_curso, nota1, nota2, nota3, media);
         }
 
         else if( op == 2 ){
