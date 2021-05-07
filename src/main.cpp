@@ -20,7 +20,7 @@ int main(){
     string nome_estudante, nome_curso;
 
     // Variáveis para armazenar os números de matrículas, notas e média
-    int numero_matricula = 0, nota1, nota2, nota3, media;
+    float numero_matricula = 0, nota1, nota2, nota3, media;
 
     
     while(1){
@@ -35,23 +35,26 @@ int main(){
         }
         else if( op == 1 ){
             
+            //Entradas do usuário
             fflush(stdin); // Limpa o buffer
             cout << "Digite o nome do estudante: ";
             getline(cin, nome_estudante);
 
             fflush(stdin); // Limpa o buffer
-            cout << "Digite o curso do estudante: ";
+            cout << "Digite o nome do curso: ";
             getline(cin, nome_curso);
 
             fflush(stdin); // Limpa o buffer
             cout << "Digite as três notas (separadas por espaço): ";
             cin >> nota1 >> nota2 >> nota3;
+            //Entradas do usuário
 
+            
             //Cálculo da média
             media = (nota1 + nota2 + nota3) / 3;
 
             //Cria a instância
-            data1 = new Data(numero_matricula, nome_estudante, nome_curso, nota1, nota2, nota3, media);
+            //data1 = new Data(numero_matricula, nome_estudante, nome_curso, nota1, nota2, nota3, media);
 
 
         }

@@ -6,7 +6,7 @@
 
 class List{
 
-private:
+public:
     Node *head;
     Node *tail;
     int size;
@@ -16,7 +16,7 @@ public:
     List();
     ~List();
 
-    string insereMusica(Data *dado);
+    void insereDados(Data *dado);
 };
 
 #endif
