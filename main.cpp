@@ -19,7 +19,7 @@ int main(){
     int op;
 
     // Variáveis para armazenar os nomes do estudante e curso
-    string nome_estudante, nome_curso;
+    string nome_estudante, nome_curso, cpf;
 
     // Variáveis para armazenar os números de matrículas, notas e média
     float numero_matricula = 0, nota1, nota2, nota3, media;
@@ -47,15 +47,24 @@ int main(){
             getline(cin, nome_curso);
 
             fflush(stdin); // Limpa o buffer
+            cout << "Digite o cpf(sem hífen e ponto final): ";
+            getline(cin, cpf);
+
+            fflush(stdin); // Limpa o buffer
             cout << "Digite as três notas (separadas por espaço): ";
             cin >> nota1 >> nota2 >> nota3;
+            cout << endl;
             //Entradas do usuário
 
 
             media = calculaMedia(nota1, nota2, nota3);
 
             //Chama a função de inserir os dados
-            sistema->inserirDadosSistema(numero_matricula, nome_estudante, nome_curso, nota1, nota2, nota3, media);
+            sistema->inserirDadosSistema(numero_matricula, nome_estudante, cpf, nome_curso, nota1, nota2, nota3, media);
+            cout << "Dados cadastrados " << endl << "o número da matrícula é : " << numero_matricula << endl << endl;
+            
+            //Será o número de matícula da próxima pessoa cadastrada
+            numero_matricula++;
         }
 
         else if( op == 2 ){
@@ -83,3 +92,4 @@ int main(){
     }   
     return 0;
 }
+

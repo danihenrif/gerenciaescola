@@ -1,8 +1,7 @@
 #include <iostream>
 
 #include "node.hpp"
-
-
+#include "data.hpp"
 
 //Construtor
 Node::Node(){

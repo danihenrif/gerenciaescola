@@ -27,8 +27,3 @@ void List::insereDados(Data *dado){
         this->tail = novo;
     }
 }
-
-
-
-
-
