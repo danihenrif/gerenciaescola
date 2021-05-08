@@ -23,3 +23,11 @@ void Sistema::inserirDadosSistema(float numero_matricula , string nome_estudante
     this->lista->insereDados(dados);
 
 }
+
+void Sistema::trocaNomeSistema(string nome_antigo, string nome_novo){
+    this->lista->trocaNome(nome_antigo, nome_novo);
+}
+
+void Sistema::deletaCadastroSistema(string nome, string cpf){
+    this->lista->deletaCadastro(nome, cpf);
+}

@@ -17,9 +17,10 @@ int main(){
     Sistema *sistema = new Sistema();
     
     int op;
-
+    char opchar;
+    
     // Variáveis para armazenar os nomes do estudante e curso
-    string nome_estudante, nome_curso, cpf;
+    string nome_estudante, nome_curso, cpf, nome_estudante_trocar;
 
     // Variáveis para armazenar os números de matrículas, notas e média
     float numero_matricula = 0, nota1, nota2, nota3, media;
@@ -68,10 +69,39 @@ int main(){
         }
 
         else if( op == 2 ){
-            
+            //Entradas do usuário
+            fflush(stdin); // Limpa o buffer
+            cout << "Qual informação você deseja alterar ?" << endl << "(a - nome do estudante)"
+            << endl << "(b - nome do curso)" << endl << "(c - cpf)" << endl;
+            cin >> opchar;
+
+            if(opchar == 'a' || opchar == 'A'){
+                
+                cout << "Qual é o atual nome do estudante: ";
+                fflush(stdin); // Limpa o buffer
+                getline(cin,nome_estudante);
+                cout << endl;
+
+                cout << "Digite o novo nome: ";
+                fflush(stdin);
+                getline(cin,nome_estudante_trocar);
+                cout << endl;
+
+                sistema->trocaNomeSistema(nome_estudante, nome_estudante_trocar);
+            }
         }
         else if( op == 3 ){
+            cout << "Qual é o nome do estudante: ";
+            fflush(stdin); // Limpa o buffer
+            getline(cin,nome_estudante);
+            cout << endl;
+
+            cout << "Qual é o cpf do estudante: ";
+            fflush(stdin);
+            getline(cin,cpf);
+            cout << endl;
             
+            sistema->deletaCadastroSistema(nome_estudante, cpf);
         }
         else if( op == 4 ){            
 

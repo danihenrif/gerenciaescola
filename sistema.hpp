@@ -16,6 +16,10 @@ class Sistema{
     ~Sistema();
 
     void inserirDadosSistema(float numero_matricula , string nome_estudante, string cpf, string nome_curso, float nota1, float nota2, float nota3, float media);
+
+    void trocaNomeSistema(string nome_antigo, string nome_novo);
+
+    void deletaCadastroSistema(string nome, string cpf);
 };
 
 

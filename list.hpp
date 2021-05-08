@@ -16,7 +16,10 @@ class List{
         List();
         ~List();
 
+        bool checaListaNula();
         void insereDados(Data *dado);
+        void trocaNome(string nome_antigo, string nome_novo);
+        void deletaCadastro(string nome, string cpf);
 };
 
 #endif

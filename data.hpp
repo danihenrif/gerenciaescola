@@ -8,7 +8,7 @@ using namespace std;
 
 class Data{
 
-private:
+public:
     int registration;
     string name;
     string course;
