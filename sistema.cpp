@@ -35,3 +35,11 @@ void Sistema::deletaCadastroSistema(string nome, string cpf){
 void Sistema::verificaNotasSistema(string nome, string cpf){
     this->lista->verificaNotas(nome, cpf);
 }
+
+void Sistema::alteraNotasSistema(string nome, string cpf, float nota1, float nota2, float nota3){
+    this->lista->alteraNotas(nome, cpf,  nota1,  nota2,  nota3);
+}
+
+void Sistema::listaDadosSistema(){
+    this->lista->listaDados();
+}

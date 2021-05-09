@@ -69,58 +69,104 @@ int main(){
         }
 
         else if( op == 2 ){
-            //Entradas do usuário
-            fflush(stdin); // Limpa o buffer
-            cout << "Qual informação você deseja alterar ?" << endl << "(a - nome do estudante)"
-            << endl << "(b - nome do curso)" << endl << "(c - cpf)" << endl;
-            cin >> opchar;
+            if(sistema->lista->checaListaNula()){
+                cout << "Não há estudantes cadastrados !!" << endl;
+            }
+            else{
+                //Entradas do usuário
+                fflush(stdin); // Limpa o buffer
+                cout << "Qual informação você deseja alterar ?" << endl << "(a - nome do estudante)"
+                << endl << "(b - nome do curso)" << endl << "(c - cpf)" << endl;
+                cin >> opchar;
 
-            if(opchar == 'a' || opchar == 'A'){
-                
-                cout << "Qual é o atual nome do estudante: ";
+                if(opchar == 'a' || opchar == 'A'){
+                    
+                    cout << "Qual é o atual nome do estudante: ";
+                    fflush(stdin); // Limpa o buffer
+                    getline(cin,nome_estudante);
+                    cout << endl;
+
+                    cout << "Digite o novo nome: ";
+                    fflush(stdin);
+                    getline(cin,nome_estudante_trocar);
+                    cout << endl;
+
+                    sistema->trocaNomeSistema(nome_estudante, nome_estudante_trocar);
+                }
+            }    
+        }
+        else if( op == 3 ){
+            if(sistema->lista->checaListaNula()){
+                cout << "Não há estudantes cadastrados !!" << endl;
+            }
+            else{
+                cout << "Qual é o nome do estudante: ";
                 fflush(stdin); // Limpa o buffer
                 getline(cin,nome_estudante);
                 cout << endl;
 
-                cout << "Digite o novo nome: ";
+                cout << "Qual é o cpf do estudante: ";
                 fflush(stdin);
-                getline(cin,nome_estudante_trocar);
+                getline(cin,cpf);
                 cout << endl;
-
-                sistema->trocaNomeSistema(nome_estudante, nome_estudante_trocar);
+                
+                sistema->deletaCadastroSistema(nome_estudante, cpf);
             }
         }
-        else if( op == 3 ){
-            cout << "Qual é o nome do estudante: ";
-            fflush(stdin); // Limpa o buffer
-            getline(cin,nome_estudante);
-            cout << endl;
-
-            cout << "Qual é o cpf do estudante: ";
-            fflush(stdin);
-            getline(cin,cpf);
-            cout << endl;
-            
-            sistema->deletaCadastroSistema(nome_estudante, cpf);
-        }
         else if( op == 4 ){            
-            cout << "Qual é o nome do estudante: ";
-            fflush(stdin); // Limpa o buffer
-            getline(cin,nome_estudante);
-            cout << endl;
+            if(sistema->lista->checaListaNula()){
+                cout << "Não há estudantes cadastrados !!" << endl;
+            }
+            else{
+                cout << "Qual é o nome do estudante: ";
+                fflush(stdin); // Limpa o buffer
+                getline(cin,nome_estudante);
+                cout << endl;
 
-            cout << "Qual é o cpf do estudante: ";
-            fflush(stdin);
-            getline(cin,cpf);
-            cout << endl;
+                cout << "Qual é o cpf do estudante: ";
+                fflush(stdin);
+                getline(cin,cpf);
+                cout << endl;
+                
+                sistema->verificaNotasSistema(nome_estudante, cpf); 
+            }
             
-            sistema->verificaNotasSistema(nome_estudante, cpf);
         }
         else if( op == 5 ){
-            
+            if(sistema->lista->checaListaNula()){
+                cout << "Não há estudantes cadastrados !!" << endl;
+            }
+            else{
+                cout << "Qual é o nome do estudante: ";
+                fflush(stdin); // Limpa o buffer
+                getline(cin,nome_estudante);
+                cout << endl;
+
+                cout << "Qual é o cpf do estudante: ";
+                fflush(stdin);
+                getline(cin,cpf);
+                cout << endl;
+                
+                //poderia fazer uma fuinção para buscar antes o cadastro antes
+                //de pedir as três notas, mas a preguiça bateu :D
+                
+                fflush(stdin); // Limpa o buffer
+                cout << "Digite as três notas (separadas por espaço): ";
+                cin >> nota1 >> nota2 >> nota3;
+                cout << endl;
+                //Entradas do usuário
+
+                sistema->alteraNotasSistema(nome_estudante, cpf, nota1, nota2, nota3); 
+            }
+    
         }
         else if( op == 6 ){
-            
+            if(sistema->lista->checaListaNula()){
+                cout << "Não há estudantes cadastrados !!" << endl;
+            }
+            else{
+                sistema->listaDadosSistema();
+            }
         }
         else if( op == 7 ){
             
