@@ -31,3 +31,7 @@ void Sistema::trocaNomeSistema(string nome_antigo, string nome_novo){
 void Sistema::deletaCadastroSistema(string nome, string cpf){
     this->lista->deletaCadastro(nome, cpf);
 }
+
+void Sistema::verificaNotasSistema(string nome, string cpf){
+    this->lista->verificaNotas(nome, cpf);
+}

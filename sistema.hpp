@@ -20,6 +20,8 @@ class Sistema{
     void trocaNomeSistema(string nome_antigo, string nome_novo);
 
     void deletaCadastroSistema(string nome, string cpf);
+
+    void verificaNotasSistema(string nome, string cpf);
 };
 
 

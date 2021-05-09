@@ -20,6 +20,7 @@ class List{
         void insereDados(Data *dado);
         void trocaNome(string nome_antigo, string nome_novo);
         void deletaCadastro(string nome, string cpf);
+        void verificaNotas(string nome, string cpf);
 };
 
 #endif

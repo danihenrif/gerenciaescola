@@ -104,7 +104,17 @@ int main(){
             sistema->deletaCadastroSistema(nome_estudante, cpf);
         }
         else if( op == 4 ){            
+            cout << "Qual é o nome do estudante: ";
+            fflush(stdin); // Limpa o buffer
+            getline(cin,nome_estudante);
+            cout << endl;
 
+            cout << "Qual é o cpf do estudante: ";
+            fflush(stdin);
+            getline(cin,cpf);
+            cout << endl;
+            
+            sistema->verificaNotasSistema(nome_estudante, cpf);
         }
         else if( op == 5 ){
             
@@ -116,7 +126,7 @@ int main(){
             
         }
         else{
-            cout  << "ERRO : digite uma opção válida!";
+            cout  << "ERRO : digite uma opção válida!" << endl;
         }
 
     }   
