@@ -14,5 +14,4 @@ Node::~Node(){
 
 Node::Node(Data *dados){
     this->data1 = dados;
-    this->next = NULL;
 }

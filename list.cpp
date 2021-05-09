@@ -17,6 +17,7 @@ List::List(){
 List::~List(){
 
 }
+
 bool List::checaListaNula(){
     return this->head == NULL;
 }
