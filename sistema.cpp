@@ -43,3 +43,7 @@ void Sistema::alteraNotasSistema(string nome, string cpf, float nota1, float not
 void Sistema::listaDadosSistema(){
     this->lista->listaDados();
 }
+
+void Sistema::listaSituacaoEstudantesSistema(){
+    this->lista->listaSituacaoEstudantes();
+}

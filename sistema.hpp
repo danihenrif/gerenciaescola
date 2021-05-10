@@ -27,6 +27,8 @@ class Sistema{
     void alteraNotasSistema(string nome, string cpf, float nota1, float nota2, float nota3);
 
     void listaDadosSistema();
+
+    void listaSituacaoEstudantesSistema();
 };
 
 

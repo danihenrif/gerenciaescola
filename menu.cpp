@@ -9,7 +9,7 @@
     std::cout << "    4 - VERIFICAR NOTAS DO(A) ESTUDANTE" << std::endl;
     std::cout << "    5 - ALTERAR NOTA" << std::endl;
     std::cout << "    6 - LISTAR DADOS" << std::endl;
-    std::cout << "    7 - LISTAR ESTUTANTES QUE..." << std::endl;
+    std::cout << "    7 - LISTAR SITUAÇÃO DOS ESTUDANTES" << std::endl;
     std::cout << "==========================================================================" << std::endl;
     }
 

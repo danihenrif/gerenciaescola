@@ -23,6 +23,7 @@ class List{
         void verificaNotas(string nome, string cpf);
         void alteraNotas(string nome, string cpf, float n1, float n2, float n3);
         void listaDados();
+        void listaSituacaoEstudantes();
 };
 
 #endif

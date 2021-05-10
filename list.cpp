@@ -125,6 +125,8 @@ void List::alteraNotas(string nome, string cpf, float n1, float n2, float n3){
             tmp->data1->grade1 = n1;
             tmp->data1->grade2 = n2;
             tmp->data1->grade3 = n3;
+            tmp->data1->average = (n1 + n2 + n3) / 3;
+            cout << "Nota alterada com sucesso!!" << endl; 
             return;
         }
         //Senão se o cadastro  estiver depois da primeira posição
@@ -134,6 +136,8 @@ void List::alteraNotas(string nome, string cpf, float n1, float n2, float n3){
                     tmp->next->data1->grade1 = n1;
                     tmp->next->data1->grade1 = n2;
                     tmp->next->data1->grade1 = n3;
+                    tmp->data1->average = (n1 + n2 + n3) / 3;
+                    cout << "Nota alterada com sucesso!!" << endl;
                     return;
                 }
                 tmp = tmp->next;
@@ -155,6 +159,39 @@ void List::listaDados(){
         cout << "Nota 2: " << tmp->data1->grade2 << endl;
         cout << "Nota 3: " << tmp->data1->grade3 << endl;
         cout << "Média: " << tmp->data1->average << endl;
+        cout << endl << endl;
+        if(tmp->next == NULL ){
+            return;
+        }
+        tmp = tmp->next;
+    }
+}
+
+void List::listaSituacaoEstudantes(){
+    Node *tmp = this->head;
+    
+    while(1){
+        if(tmp->data1->average >= 7){
+            cout << "Nome : " << tmp->data1->name  << endl;
+            cout << "Cpf : " << tmp->data1->cpf  << endl;
+            cout << "Situação : Aprovado(APR)" << endl;
+        }
+        else if( (tmp->data1->average) >= 5 and (tmp->data1->average) <= 7 and (tmp->data1->grade1) >= 3 and (tmp->data1->grade2) >= 3
+        and (tmp->data1->grade3) >= 3 ){
+            cout << "Nome : " << tmp->data1->name  << endl;
+            cout << "Cpf : " << tmp->data1->cpf  << endl;
+            cout << "Situação : Aprovado por notas (APRN)" << endl;
+        }
+        else if((tmp->data1->average) < 3){
+            cout << "Nome : " << tmp->data1->name  << endl;
+            cout << "Cpf : " << tmp->data1->cpf  << endl;
+            cout << "Situação : Reprovado(REP)" << endl; 
+        }
+        else{
+            cout << "Nome : " << tmp->data1->name  << endl;
+            cout << "Cpf : " << tmp->data1->cpf  << endl;
+            cout << "Situação : Recuperação(REC" << endl;
+        }
         cout << endl << endl;
         if(tmp->next == NULL ){
             return;

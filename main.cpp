@@ -169,7 +169,12 @@ int main(){
             }
         }
         else if( op == 7 ){
-            
+            if(sistema->lista->checaListaNula()){
+                cout << "Não há estudantes cadastrados !!" << endl;
+            }
+            else{
+                sistema->listaSituacaoEstudantesSistema();
+            }
         }
         else{
             cout  << "ERRO : digite uma opção válida!" << endl;
