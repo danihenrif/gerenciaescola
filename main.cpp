@@ -20,7 +20,7 @@ int main(){
     char opchar;
     
     // Variáveis para armazenar os nomes do estudante e curso
-    string nome_estudante, nome_curso, cpf, nome_estudante_trocar;
+    string nome_estudante, nome_curso, cpf, auxtrocar;
 
     // Variáveis para armazenar os números de matrículas, notas e média
     float numero_matricula = 0, nota1, nota2, nota3, media;
@@ -73,25 +73,48 @@ int main(){
                 cout << "Não há estudantes cadastrados !!" << endl;
             }
             else{
+                
                 //Entradas do usuário
                 fflush(stdin); // Limpa o buffer
                 cout << "Qual informação você deseja alterar ?" << endl << "(a - nome do estudante)"
                 << endl << "(b - nome do curso)" << endl << "(c - cpf)" << endl;
                 cin >> opchar;
 
-                if(opchar == 'a' || opchar == 'A'){
+                cout << "Qual é o nome do estudante: " << endl;
+                fflush(stdin);
+                getline(cin, nome_estudante);
+                cout << endl;
+
+                cout << "Qual é o cpf do estudante: " << endl;
+                fflush(stdin);
+                getline(cin, cpf);
+                cout << endl;
+                //Entradas do usuário
+
+                if(opchar == 'a' or opchar == 'A'){
+                    cout << "Qual é o novo nome do estudante: " << endl;
+                    fflush(stdin);// Limpa o buffer
+                    getline(cin, auxtrocar);
+                    cout << endl;
                     
-                    cout << "Qual é o atual nome do estudante: ";
+                    sistema->trocaNomeSistema(nome_estudante, cpf, auxtrocar);
+                }
+                else if(opchar == 'b' or opchar == 'B'){
+                    cout << "Qual é novo curso: ";
                     fflush(stdin); // Limpa o buffer
-                    getline(cin,nome_estudante);
+                    getline(cin,auxtrocar);
                     cout << endl;
 
-                    cout << "Digite o novo nome: ";
-                    fflush(stdin);
-                    getline(cin,nome_estudante_trocar);
+                    sistema->trocaCursoSistema(nome_estudante, cpf,  auxtrocar);
+                }
+
+                else if(opchar == 'c' or opchar == 'C'){
+                    cout << "Qual é novo CPF: ";
+                    fflush(stdin); // Limpa o buffer
+                    getline(cin,auxtrocar);
                     cout << endl;
 
-                    sistema->trocaNomeSistema(nome_estudante, nome_estudante_trocar);
+                    sistema->trocaCpfSistema(cpf, auxtrocar);
                 }
             }    
         }

@@ -24,9 +24,18 @@ void Sistema::inserirDadosSistema(float numero_matricula , string nome_estudante
 
 }
 
-void Sistema::trocaNomeSistema(string nome_antigo, string nome_novo){
-    this->lista->trocaNome(nome_antigo, nome_novo);
+void Sistema::trocaNomeSistema(string nome_antigo, string cpf, string nome_novo){
+    this->lista->trocaNome(nome_antigo, cpf ,nome_novo);
 }
+
+void Sistema::trocaCursoSistema(string nome_antigo, string cpf, string nome_novo){
+    this->lista->trocaCurso(nome_antigo, cpf ,nome_novo);
+}
+
+void Sistema::trocaCpfSistema(string cpf, string cpf_novo){
+    this->lista->trocaCpf(cpf, cpf_novo);
+}
+
 
 void Sistema::deletaCadastroSistema(string nome, string cpf){
     this->lista->deletaCadastro(nome, cpf);

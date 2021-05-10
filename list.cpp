@@ -36,38 +36,77 @@ void List::insereDados(Data *dado){
     }
 }
 
-void List::trocaNome(string nome_antigo, string nome_novo){
-    
-    //Checa se há elemento na lista (alunos cadastrados))
-    if(checaListaNula()){
-        cout << "É necessário haver alunos cadastrados para usar esta função :D" << endl;
+void List::trocaNome(string nome_antigo, string cpf, string nome_novo){
+
+    //node auxiliar
+    Node *tmp = this->head; 
+        
+    //Se o cadastro estiver na primeira posição
+    if(tmp->data1->name == nome_antigo and tmp->data1->cpf == cpf){
+        tmp->data1->name = nome_novo;
+        cout << "Nome alterado com sucesso!!" << endl;
         return;
     }
-    
-    else{ 
-        //node auxiliar
-        Node *tmp = this->head; 
         
-        //Se o cadastro estiver na primeira posição
-        if(tmp->data1->name == nome_antigo){
+    //Caso não esteja na primeira posição
+
+    while(tmp->next != NULL){
+        if(tmp->data1->name == nome_antigo and tmp->data1->cpf == cpf){
             tmp->data1->name = nome_novo;
             cout << "Nome alterado com sucesso!!" << endl;
             return;
         }
-        
-        //Caso não esteja na primeira posição
-        else{
-            while(tmp->next != NULL){
-                if(tmp->data1->name == nome_antigo){
-                    tmp->data1->name = nome_novo;
-                    cout << "Nome alterado com sucesso!!" << endl;
-                    return;
-                }
-                tmp = tmp->next;
-            }
-        }
+        tmp = tmp->next;
     }
     cout << "Não foi possível achar um cadastro com esse nome!" << endl;
+}
+
+void List::trocaCurso(string nome_antigo, string cpf, string nome_novo){
+    //node auxiliar
+    Node *tmp = this->head; 
+        
+    //Se o cadastro estiver na primeira posição
+    if(tmp->data1->name == nome_antigo and tmp->data1->cpf == cpf){
+        tmp->data1->course = nome_novo;
+        cout << "Nome alterado com sucesso!!" << endl;
+        return;
+    }
+        
+    //Caso não esteja na primeira posição
+
+    while(tmp->next != NULL){
+        if(tmp->data1->name == nome_antigo and tmp->data1->cpf == cpf){
+            tmp->data1->course= nome_novo;
+            cout << "Nome alterado com sucesso!!" << endl;
+            return;
+        }
+        tmp = tmp->next;
+    }
+    cout << "Não foi possível achar um cadastro com esse nome!" << endl;
+}
+
+void List::trocaCpf(string cpf, string cpf_novo){
+    //node auxiliar
+    Node *tmp = this->head; 
+        
+    //Se o cadastro estiver na primeira posição
+    if(tmp->data1->cpf == cpf){
+        tmp->data1->cpf = cpf_novo;
+        cout << "CPF alterado com sucesso!!" << endl;
+        return;
+    }
+        
+    //Caso não esteja na primeira posição
+
+    while(tmp->next != NULL){
+        if(tmp->data1->cpf == cpf){
+            tmp->data1->cpf= cpf_novo;
+            cout << "CPF alterado com sucesso!!" << endl;
+            return;
+        }
+        tmp = tmp->next;
+    }
+    cout << "Não foi possível achar um cadastro com esse CPF!" << endl;    
 }
 
 void List::deletaCadastro(string nome, string cpf){
@@ -191,7 +230,7 @@ void List::listaSituacaoEstudantes(){
         else{
             cout << "Nome : " << tmp->data1->name  << endl;
             cout << "Cpf : " << tmp->data1->cpf  << endl;
-            cout << "Situação : Recuperação(REC" << endl;
+            cout << "Situação : Recuperação(REC)" << endl;
         }
         cout << endl << endl;
         if(tmp->next == NULL ){

@@ -18,7 +18,9 @@ class List{
 
         bool checaListaNula();
         void insereDados(Data *dado);
-        void trocaNome(string nome_antigo, string nome_novo);
+        void trocaNome(string nome_antigo, string cpf, string nome_novo);
+        void trocaCurso(string nome_antigo, string cpf, string nome_novo);
+        void trocaCpf(string cpf, string cpf_novo);
         void deletaCadastro(string nome, string cpf);
         void verificaNotas(string nome, string cpf);
         void alteraNotas(string nome, string cpf, float n1, float n2, float n3);

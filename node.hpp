@@ -7,7 +7,7 @@ class Node{
 
     public:
         Data *data1;
-        Node  *next = NULL;
+        Node  *next ;
 
         Node();
         ~Node();
