@@ -5,30 +5,3 @@ all: create_dir main
 create_dir:
 	mkdir -p bin
 
-# Compila o arquivo data.cpp e gera o arquivo objeto data.o
-bin/data.o: src/data.cpp
-	g++ src/data.cpp -Iinclude -O0 -g -Wall -ansi -pedantic -std=c++11 -c -o bin/data.o
-
-# Compila o arquivo node.cpp e gera o arquivo objeto node.o
-bin/node.o: src/node.cpp bin/data.o
-	g++ src/node.cpp -Iinclude -O0 -g -Wall -ansi -pedantic -std=c++11 -c -o bin/node.o
-
-# Compila o arquivo list.cpp e gera o arquivo objeto list.o
-bin/list.o: src/list.cpp bin/node.o
-	g++ src/list.cpp -Iinclude -O0 -g -Wall -ansi -pedantic -std=c++11 -c -o bin/list.o
-
-# Compila o arquivo main.cpp, gera o arquivo objeto main.o e o executável
-bin/main.o: src/main.cpp bin/node.o
-	g++ src/main.cpp -Iinclude -O0 -g -Wall -ansi -pedantic -std=c++11 -c -o bin/main.o
-
-# Cria o arquivo executável
-main: bin/main.o
-	g++ bin/*.o -Iinclude -O0 -g -Wall -ansi -pedantic -std=c++11 -o main
-
-# Executa o programa
-run: all
-	./main
-
-# Apaga a pasta de arquivos objetos e o executável
-clean:
-	rm -rf bin main

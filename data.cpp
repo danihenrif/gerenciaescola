@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 
-
 #include "data.hpp"
 
 using namespace std;

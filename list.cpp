@@ -2,9 +2,7 @@
 #include <string>
 
 #include "list.hpp"
-#include "node.hpp"
-#include "data.hpp"
-#include "sistema.hpp"
+
 
 using namespace std;
 
