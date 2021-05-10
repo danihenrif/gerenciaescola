@@ -21,7 +21,6 @@ public:
 public :
     Data( float registration, string name, string cpf, string course, float grade1, float grade2, float grade3, float average );
     ~Data();
-
 };
 
 #endif

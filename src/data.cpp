@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "data.hpp"
+#include "../include/data.hpp"
 
 using namespace std;
   

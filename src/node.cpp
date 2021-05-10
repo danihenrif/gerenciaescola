@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "node.hpp"
-
+#include "../include/node.hpp"
+using namespace std;
 
 //Construtor
 Node::Node(){

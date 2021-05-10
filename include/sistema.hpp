@@ -4,8 +4,6 @@
 #include <iostream>
 #include <string>
 
-#include "data.hpp"
-#include "node.hpp"
 #include "list.hpp"
 
 using namespace std;

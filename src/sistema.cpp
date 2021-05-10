@@ -1,6 +1,7 @@
 #include <iostream>
+#include <string>
 
-#include "sistema.hpp"
+#include "../include/sistema.hpp"
 
 using namespace std;
 

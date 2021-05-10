@@ -4,6 +4,8 @@
 #include "node.hpp"
 #include "data.hpp"
 
+using namespace std;
+
 class List{
 
     public:

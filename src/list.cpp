@@ -1,11 +1,9 @@
 #include <iostream>
 #include <string>
 
-#include "list.hpp"
-
+#include "../include/list.hpp"
 
 using namespace std;
-
 
 List::List(){
     head = NULL;
