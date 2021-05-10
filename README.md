@@ -4,11 +4,14 @@
 ```console
 make all
 ```
-## Para compilar e executar
-```console
-make run
-```
+
 ## Para executar 
 ```console
 ./main
 ```
+
+## Para compilar e executar
+```console
+make run
+```
+
