@@ -2,7 +2,9 @@
 #define LIST_HPP
 
 #include "node.hpp"
-#include "data.hpp"
+#include <fstream>
+
+
 
 using namespace std;
 
@@ -28,6 +30,7 @@ class List{
         void alteraNotas(string nome, string cpf, float n1, float n2, float n3);
         void listaDados();
         void listaSituacaoEstudantes();
+        void printaNoArquivo(ofstream &arquivo);
 };
 
 #endif

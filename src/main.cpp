@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -25,6 +26,9 @@ void imprimeMenu(){
 }
 
 int main(){
+    ofstream archive;
+
+    
     Sistema *sistema = new Sistema();
     
     int op;
@@ -45,6 +49,18 @@ int main(){
         cout << endl;
 
         if( op == 0 ){
+            
+            archive.open("dados.txt");
+            
+            if(archive.is_open()){
+                archive << "Nome, Curso, Cpf, Nota1, Nota2, Nota3, Média, Matrícula" << endl;
+                sistema->printaNoArquivoSistema(archive);
+                cout << "Dados gravados no arquivo :D" << endl;
+                archive.close();
+            }
+            else{
+                cout << "Não foi possível abrir o arquivo :C, encerrando programa" << endl;
+            }
             break;
         }
         else if( op == 1 ){

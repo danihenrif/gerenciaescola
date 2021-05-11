@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include<fstream>
 #include "../include/list.hpp"
 
 using namespace std;
@@ -230,6 +230,27 @@ void List::listaSituacaoEstudantes(){
         }
         cout << endl << endl;
         if(tmp->next == NULL ){
+            return;
+        }
+        tmp = tmp->next;
+    }
+}
+
+void List::printaNoArquivo(ofstream &arquivo){
+    Node *tmp = this->head;
+    
+    while(1){
+        arquivo << tmp->data1->name << ", ";
+        arquivo << tmp->data1->course << ", ";
+        arquivo << tmp->data1->cpf << ", ";
+        arquivo << tmp->data1->grade1 << ", ";
+        arquivo << tmp->data1->grade2 << ", ";
+        arquivo << tmp->data1->grade3 << ", ";
+        arquivo << tmp->data1->average << ", ";
+        arquivo << tmp->data1->registration;
+        arquivo << endl;
+
+        if(tmp->next == NULL){
             return;
         }
         tmp = tmp->next;

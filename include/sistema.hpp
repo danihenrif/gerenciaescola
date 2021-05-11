@@ -1,8 +1,6 @@
 #ifndef SISTEMA_HPP
 #define SISTEMA_HPP
 
-#include <iostream>
-#include <string>
 
 #include "list.hpp"
 
@@ -31,6 +29,10 @@ class Sistema{
     void listaDadosSistema();
 
     void listaSituacaoEstudantesSistema();
+
+    void printaNoArquivoSistema(ofstream &arquivo);
+
+
 };
 
 

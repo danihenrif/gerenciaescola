@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "../include/node.hpp"
+
 using namespace std;
 
 //Construtor

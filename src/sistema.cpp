@@ -53,3 +53,7 @@ void Sistema::listaDadosSistema(){
 void Sistema::listaSituacaoEstudantesSistema(){
     this->lista->listaSituacaoEstudantes();
 }
+
+void Sistema::printaNoArquivoSistema(ofstream &arquivo){
+    this->lista->printaNoArquivo(arquivo);
+}
