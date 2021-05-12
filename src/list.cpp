@@ -18,17 +18,32 @@ bool List::checaListaNula(){
     return this->head == NULL;
 }
 
-void List::insereDados(Data *dado){
+bool List::insereDados(Data *dado){
     
     Node *novo = new Node(dado);
+    Node *tmp = this->head;
     
     if(checaListaNula()){
        this->head = novo;
        this->tail = novo;
+       return true;
     }
-    else{
+    else{  
+        //Checa se há o mesmo número de cpf cadastrado
+        while(1){
+            if(novo->data1->cpf == tmp->data1->cpf){
+                return false;
+            }
+            if(tmp->next == NULL){
+                break;
+            }
+            tmp = tmp->next;
+        }       
+        
+        //Cadastra os dados
         this->tail->next = novo;
         this->tail = novo;
+        return true;
     }
 }
 

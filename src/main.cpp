@@ -86,13 +86,15 @@ int main(){
 
 
             media = calculaMedia(nota1, nota2, nota3);
-
-            //Chama a função de inserir os dados
-            sistema->inserirDadosSistema(numero_matricula, nome_estudante, cpf, nome_curso, nota1, nota2, nota3, media);
-            cout << "Dados cadastrados " << endl << "o número da matrícula é : " << numero_matricula << endl << endl;
             
-            //Será o número de matícula da próxima pessoa cadastrada
-            numero_matricula++;
+            //Chama a função de inserir os dados
+            if(sistema->inserirDadosSistema(numero_matricula, nome_estudante, cpf, nome_curso, nota1, nota2, nota3, media)){
+                cout << "Dados cadastrados " << endl << "o número da matrícula é : " << numero_matricula << endl << endl;
+                numero_matricula++;
+            }
+            else{
+                cout << "Já existe um cadastro com esse número de cpf!" << endl;
+            }
         }
 
         else if( op == 2 ){

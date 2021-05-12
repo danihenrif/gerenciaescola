@@ -21,7 +21,7 @@ class List{
         ~List();
 
         bool checaListaNula();
-        void insereDados(Data *dado);
+        bool insereDados(Data *dado);
         void trocaNome(string nome_antigo, string cpf, string nome_novo);
         void trocaCurso(string nome_antigo, string cpf, string nome_novo);
         void trocaCpf(string cpf, string cpf_novo);
