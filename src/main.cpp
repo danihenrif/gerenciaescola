@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <thread>
+#include <chrono>
 
 using namespace std;
 
@@ -40,6 +42,7 @@ int main(){
     // Variáveis para armazenar os números de matrículas, notas e média
     float numero_matricula = 0, nota1, nota2, nota3, media;
 
+    system("clear");
     
     while(1){
         
