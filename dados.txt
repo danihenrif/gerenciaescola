@@ -1,3 +1,4 @@
 Nome, Curso, Cpf, Nota1, Nota2, Nota3, Média, Matrícula
-daniel, ti, 40, 10, 10, 10, 10, 0
-daniel, ti, 10, 10, 10, 10, 10, 1
+daniel, ti, 09856473892, 7, 5, 3, 5, 0
+mônica, engenharia, 09854325671, 10, 10, 10, 10, 1
+pedro, história, 34567834201, 40, 50, 6, 32, 2
