@@ -34,10 +34,10 @@ int main(){
     int op;
     char opchar;
     
-    // Variáveis para armazenar os nomes do estudante e curso
+    
     string nome_estudante, nome_curso, cpf, auxtrocar;
 
-    // Variáveis para armazenar os números de matrículas, notas e média
+    
     float numero_matricula = 0, nota1, nota2, nota3, media;
 
     system("clear");
