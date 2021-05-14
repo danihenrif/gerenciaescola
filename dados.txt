@@ -1,2 +1,3 @@
 Nome, Curso, Cpf, Nota1, Nota2, Nota3, Média, Matrícula
-daniel, ti, 10, 10, 10, 10, 10, 0
+daniel, ti, 40, 10, 10, 10, 10, 0
+daniel, ti, 10, 10, 10, 10, 10, 1

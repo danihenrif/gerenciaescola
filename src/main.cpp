@@ -99,7 +99,6 @@ int main(){
                 cout << "Já existe um cadastro com esse número de cpf!" << endl;
             }
         }
-
         else if( op == 2 ){
             if(sistema->lista->checaListaNula()){
                 cout << "Não há estudantes cadastrados !!" << endl;

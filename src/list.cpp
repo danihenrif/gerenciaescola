@@ -100,6 +100,26 @@ void List::trocaCpf(string cpf, string cpf_novo){
     //node auxiliar
     Node *tmp = this->head; 
         
+    //Checa se há outro cpf igual ao cpf_novo
+    while(1){
+        
+        if(tmp->data1->cpf == cpf_novo){
+            cout << "Já existe um aluno com esse mesmo cpf :D" << endl;
+            return;
+        }
+        
+        tmp = tmp->next;
+        
+        if(tmp == NULL){
+            break;
+        }
+
+    }
+    
+    //Seta novamente o tmp para a cabeça da lista
+    tmp = this->head;
+    
+
     //Se o cadastro estiver na primeira posição
     if(tmp->data1->cpf == cpf){
         tmp->data1->cpf = cpf_novo;
